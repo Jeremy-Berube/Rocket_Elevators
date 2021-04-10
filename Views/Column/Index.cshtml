@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Column";
+}
+<br />
+<br />
+<div class="row justify-content-center">
+    <h1 class="display-4">Column</h1>
+</div>
+<br />
+<br />
+<div class="col-md-5 offset-md-5">
+    <section>
+        <form id="column" method="post">
+            <div class="form-group col-md-5 ">
+                <label for="Column" class="text-justify">Columns:</label>
+                <select include_blank="true">
+                    <option value=""></option>
+                </select>
+            </div>
+            <button asp-area="" asp-controller="ProductManagement" asp-action="Index" class="btn btn-primary btn-block col-md-4">Back</button>
+        </form>
+    </section>
+</div>

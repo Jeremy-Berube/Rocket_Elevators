@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Intervention page";
+}
+
+<br />
+<br />
+<div class="row justify-content-center">
+    <h1 class="display-4">Intervention</h1>
+</div>
+<br />
+<br />
+<div class="row justify-content-center ">
+    <section>
+        <form class="form-group" action="/InterventionController" method="post" id="intervention_form">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <div id="buildingField"  class="form-group col-md ">
+                    <label for="building" class="text-justify">Building</label>
+                    <select id="building" class="form-control"  required="" onchange="ajax('building');"></select>
+                </div>
+                <div id="batteryField" style="display:none" class="form-group col-md">
+                    <label for="battery" class="text-justify">Battery</label>
+                    <select id="battery"  class="form-control" required="" onchange="ajax('battery');">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div id="columnField" style="display:none" class="form-group col-md ">
+                    <label for="column" class="text-justify">Column</label>
+                    <select id="column"  class="form-control" onchange="ajax('column');">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div id="elevatorField" style="display:none" class="form-group col-md">
+                    <label for="elevator" class="text-justify">Elevator</label>
+                    <select id="elevator"  class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="Description" class="text-justify">Description</label>
+                    <textarea required maxlength="10000" rows="2" class="form-control" name="description" id="description"></textarea>
+                </div>
+            </div>
+
+        </form>
+    </section>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="~/js/intevention.js"></script>
